@@ -9,10 +9,10 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Books />} />
-        <Route path='bookstore-react-redux' element={<Books />} />
-        <Route path='home' element={<Books />} />
-        <Route path='categories' element={<Categories />} />
+        <Route path="/" element={<Books />} />
+        <Route path="bookstore-react-redux" element={<Books />} />
+        <Route path="home" element={<Books />} />
+        <Route path="categories" element={<Categories />} />
       </Routes>
     </>
   );
