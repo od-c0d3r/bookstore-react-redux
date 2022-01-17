@@ -1,6 +1,6 @@
-# Math Magicians App
+# BookstoreApp w/ React-Router-Redux 
 
-<img align="right" src="./public/react.svg" style="width:400px;">
+<img align="right" src="./public/logo.svg" style="width:400px;">
 
 > Milestone 1 : Set up the environment and tools needed to develop a React/router/redux application.
 
@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Demo
 
-- Served with Github pages : [Live](https://od-c0d3r.github.io/math-magicains-react/)
+- Served with Github pages : [Live](https://od-c0d3r.github.io/bookstore-react-redux/)
 
 ## App Tree
 
