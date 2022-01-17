@@ -1,8 +1,6 @@
-import React from "react";
-
 const Categories = () =>
-    <React.Fragment>
+    <div>
         {'Under construction'}
-    </React.Fragment>
+    </div>
 
 export default Categories;
