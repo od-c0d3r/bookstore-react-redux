@@ -1,8 +1,10 @@
-# BookstoreApp w/ React-Router-Redux 
+# BookstoreApp w/ React-Router-Redux
 
 <img align="right" src="./public/logo.svg" style="width:400px;">
 
 > Milestone 1 : Set up the environment and tools needed to develop a React/router/redux application.
+
+> Milestone 2 : Configure the Redux Store and write actions and reducer for adding and removing books.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
@@ -23,16 +25,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ├── public
 │   ├── favicon.ico
 │   ├── index.html
+│   ├── logo.svg
 │   ├── logo192.png
 │   ├── logo512.png
 │   ├── manifest.json
 │   └── robots.txt
 ├── src
+│   ├── app
+│   │   └── store.js
 │   ├── components
 │   │   ├── app
 │   │   │   └── App.js
 │   │   ├── bookCard
 │   │   │   └── BookCard.js
+│   │   ├── bookForm
+│   │   │   └── BookForm.js
 │   │   ├── books
 │   │   │   └── Books.js
 │   │   ├── categories
@@ -41,15 +48,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 │   │       └── Header.js
 │   ├── features
 │   │   ├── books
-│   │   │   └── booksSlice.js
-│   │   ├── categories
-│   │   │   └── categories.js
-│   │   └── store.js
+│   │   │   └── booksReducer.js
+│   │   └── categories
+│   │       └── categories.js
 │   ├── index.css
-│   ├── index.js
-│   ├── serviceWorker.js
-│   └── setupTests.js
+│   └── index.js
+├── .babelrc
+├── .eslintrc.json
 ├── .gitignore
+├── .stylelintrc.json
 ├── package-lock.json
 ├── package.json
 └── README.md
@@ -81,7 +88,8 @@ You may also see any lint errors in the console.
 
 - #### `npm test`
 
-  - Launches the test runner in the interactive watch mode.
+  - Launches the test runner in the interactive watch mode. 
+  - Coming Soon
 
 - #### `npm run build`
 
