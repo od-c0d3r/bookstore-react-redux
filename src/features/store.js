@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
-import booksState from '../features/books/booksReducer';
+import booksState from './books/booksReducer';
 
 const reducers = combineReducers({
   booksState,
