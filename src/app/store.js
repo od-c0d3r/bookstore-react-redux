@@ -1,10 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
-import bookReducer from '../features/books/booksSlice';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import logger from 'redux-logger';
+import booksReducer from './books/books';
 
-const store = configureStore({
-  reducer: {
-    books: bookReducer,
-  },
+const reducers = combineReducers({
+    booksReducer
 });
+
+const store = createStore(
+  reducers,
+    applyMiddleware(logger)
+);
 
 export default store;
