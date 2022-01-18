@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../features/books/booksReducer';
+import { removeBook } from '../../redux/books/booksReducer';
 
 const BookCard = (prop) => {
   const { data } = prop;

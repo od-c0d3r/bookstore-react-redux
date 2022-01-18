@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../features/books/booksReducer';
+import { addBook } from '../../redux/books/booksReducer';
 
 const BookForm = () => {
   const dispatch = useDispatch();
