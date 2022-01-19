@@ -1,12 +1,17 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const ADD_APPID = 'bookStore/books/ADD_APPID';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = {
   appid: null,
   id: 0,
   books: [],
 };
+
+export const addAppId = (payload) => ({
+  type: ADD_APPID,
+  payload,
+});
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
