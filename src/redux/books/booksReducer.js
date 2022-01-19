@@ -2,8 +2,8 @@ const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = {
-  id: 1,
-  books: [{ id: 0, title: 'book1', author: 'Willam' }, { id: 1, title: 'book2', author: 'Omar' }],
+  id: 0,
+  books: [],
 };
 
 export const addBook = (payload) => ({
