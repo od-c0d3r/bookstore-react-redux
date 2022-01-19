@@ -1,7 +1,9 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const ADD_APPID = 'bookStore/books/ADD_APPID';
 
 const initialState = {
+  appid: null,
   id: 0,
   books: [],
 };
@@ -31,6 +33,9 @@ const reducer = (state = initialState, action) => {
     case REMOVE_BOOK: {
       const booksAfterRemove = state.books.filter((book) => book.id !== action.payload);
       return { ...state, books: booksAfterRemove };
+    }
+    case ADD_APPID: {
+      return { ...state, appid: action.payload };
     }
     default:
       return state;
