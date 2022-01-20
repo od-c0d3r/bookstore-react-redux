@@ -1,0 +1,113 @@
+.bookCard {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    border: 1px rgba(211, 211, 211, 0.349) solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .bookData {
+        width: 50%;
+
+        .bookCategory {
+            color: #888;
+            font-family: Montserrat, Arial, Helvetica, sans-serif;
+            padding-bottom: 5px;
+        }
+
+        .bookTitle {
+            font-family: "Roboto Slab", serif;
+            font-size: 23px;
+            font-weight: 600;
+            padding-bottom: 3px;
+        }
+
+        .bookAuthor {
+            font-family: "Roboto Slab";
+            font-size: 14px;
+            color: #4386bf;
+        }
+
+        .linkBtn {
+            height: 25px;
+            font-family: "Roboto Slab";
+            font-size: 14px;
+            color: #4386bf;
+            background-color: rgba(255, 255, 255, 0);
+            border: 0;
+            border-right: 1px solid lightgray;
+            padding: 0 15px;
+            margin: 0;
+            margin-top: 30px;
+            cursor: pointer;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    .bookProgress {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .spinner {
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            border-right: 1px solid rgba(211, 211, 211, 0.445);
+
+            .spinnerContainer {
+                width: 90px;
+            }
+
+            .progressText {
+                padding-left: 30px;
+
+                span {
+                    display: block;
+                    font-family: Montserrat, Arial, Helvetica, sans-serif;
+                    color: #b4b4b4;
+                }
+                .percentText {
+                    color: black;
+                    font-size: xx-large;
+                }
+            }
+        }
+
+        .progressForm {
+            font-family: "Roboto Slab";
+            padding-left: 80px;
+
+            .currentChapterLabel {
+                color: rgb(146, 146, 146);
+                font-size: small;
+                padding-bottom: 5px;
+            }
+
+            .currentChapter {
+                padding-bottom: 25px;
+            }
+
+            .progressBtn {
+                font-family: "Roboto Slab";
+                color: white;
+                background-color: #0290ff;
+                padding: 8px 25px;
+                border: 0;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+    }
+}

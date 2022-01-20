@@ -11,7 +11,9 @@ const Books = () => {
     ? emptyList : books.map((book) => <BookCard key={book.id} data={book} />);
   return (
     <div id="booksPage">
-      {booksItem}
+      <div id="booksCards">
+        {booksItem}
+      </div>
       <hr className="seprator" />
       <BookForm />
     </div>
