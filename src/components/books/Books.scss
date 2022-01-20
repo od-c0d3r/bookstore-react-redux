@@ -2,14 +2,14 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 
-  .emptyList{
+  .emptyList {
     height: 100px;
     color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-      font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
   }
 
   #booksCards {
