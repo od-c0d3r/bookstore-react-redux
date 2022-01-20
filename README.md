@@ -8,6 +8,8 @@
 
 > Milestone 3 : Connect application to an existing API to create and remove books in a remote server and save a copy at localStorage for quick access.
 
+> Milestone 4 : Add styling. will use Zeplin as a collaboration tool.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Built With
@@ -20,8 +22,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## App Tree
 
-<!-- <img align="right" src="./public/screen_shot.gif" width="350px"> -->
-
 ```markdown
 src
 ├── api
@@ -29,23 +29,30 @@ src
 │   └── localStorageAPI.js
 ├── components
 │   ├── app
-│   │   └── App.js
+│   │   ├── App.js
+│   │   └── App.scss
 │   ├── bookCard
-│   │   └── BookCard.js
+│   │   ├── BookCard.js
+│   │   └── BookCard.scss
 │   ├── bookForm
-│   │   └── BookForm.js
+│   │   ├── BookForm.js
+│   │   └── BookForm.scss
 │   ├── books
-│   │   └── Books.js
+│   │   ├── Books.js
+│   │   └── Books.scss
 │   ├── categories
-│   │   └── Categories.js
+│   │   ├── Categories.js
+│   │   └── Categories.scss
 │   └── header
-│       └── Header.js
+│       ├── Header.js
+│       └── Header.scss
 ├── redux
 │   ├── books
 │   │   └── booksReducer.js
 │   ├── categories
 │   │   └── categories.js
 │   └── store.js
+├── face.png
 ├── index.css
 └── index.js
 ```
@@ -94,6 +101,10 @@ Your app is ready to be deployed!
 - Github: [@od-c0d3r](https://github.com/od-c0d3r)
 - LinkedIn: [omarrashad](https://linkedin.com/in/omarrashad)
 
+## Acknowledgements 
+
+- Thanks to [kevinsqi/react-circular-progressbar](https://github.com/kevinsqi/react-circular-progressbar/blob/HEAD/README.md) for using their Progress bar react component.
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -106,4 +117,10 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is MIT licensed.
+
+## To do :
+
+- [ ] Implement Categories in app, users can select category while adding a book.
+- [ ] Add `completed` property in book object.
+- [ ] Add animation for adding and removing cards, and spnning the progress bar.
