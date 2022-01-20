@@ -6,6 +6,8 @@
 
 > Milestone 2 : Configure the Redux Store and write actions and reducer for adding and removing books.
 
+> Milestone 3 : Connect application to an existing API to create and remove books in a remote server and save a copy at localStorage for quick access.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Built With
