@@ -6,10 +6,13 @@ import BookForm from '../bookForm/BookForm';
 
 const Books = () => {
   const books = useSelector((state) => state.booksState.books);
-  const booksItem = books.length === 0 ? '[EMPTY LIST]' : books.map((book) => <BookCard key={book.id} data={book} />);
+  const emptyList = <div className="emptyList">ADD NEW BOOK</div>;
+  const booksItem = (books.length === 0)
+    ? emptyList : books.map((book) => <BookCard key={book.id} data={book} />);
   return (
     <div id="booksPage">
       {booksItem}
+      <hr className="seprator" />
       <BookForm />
     </div>
   );

@@ -1,4 +1,18 @@
 #booksPage {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  .emptyList{
+    height: 150px;
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+      font-family: Montserrat, Arial, Helvetica, sans-serif;
+  }
+
+  .seprator {
+    color: rgba(245, 245, 245, 0.219);
+  }
 }
