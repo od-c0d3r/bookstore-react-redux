@@ -1,0 +1,51 @@
+#navHeader {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background-color: white;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  padding: 0 6.25rem;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    width: 240px;
+    height: 37px;
+    margin: 6px 47px 2px 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0290ff;
+  }
+
+  a {
+    width: 59px;
+    height: 16px;
+    margin: 18px 41px 11px 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.9px;
+    color: rgba(18, 18, 18, 0.5);
+    text-decoration: none;
+  }
+
+  .active {
+    color: black;
+  }
+
+  .profileIcon {
+    display: inline-block;
+    cursor: pointer;
+
+    .profileIconImg {
+      width: 50px;
+    }
+  }
+}
