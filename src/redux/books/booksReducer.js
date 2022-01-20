@@ -17,10 +17,11 @@ export const initState = (payload) => ({
 
 export const asyncAddBook = (payload) => (dispatch, getState) => {
   const { booksState } = getState();
-  addBook({ ...payload, item_id: booksState.id + 1 }).then(() => dispatch({
+  addBook({ ...payload, item_id: booksState.id + 1 });
+  dispatch({
     type: ADD_BOOK,
     payload,
-  }));
+  });
 };
 
 export const removeBook = (payload) => ({
