@@ -23,45 +23,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <!-- <img align="right" src="./public/screen_shot.gif" width="350px"> -->
 
 ```markdown
-.
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo.svg
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-├── src
+src
+├── api
+│   ├── bookStoreAPI.js
+│   └── localStorageAPI.js
+├── components
 │   ├── app
-│   │   └── store.js
-│   ├── components
-│   │   ├── app
-│   │   │   └── App.js
-│   │   ├── bookCard
-│   │   │   └── BookCard.js
-│   │   ├── bookForm
-│   │   │   └── BookForm.js
-│   │   ├── books
-│   │   │   └── Books.js
-│   │   ├── categories
-│   │   │   └── Categories.js
-│   │   └── header
-│   │       └── Header.js
-│   ├── features
-│   │   ├── books
-│   │   │   └── booksReducer.js
-│   │   └── categories
-│   │       └── categories.js
-│   ├── index.css
-│   └── index.js
-├── .babelrc
-├── .eslintrc.json
-├── .gitignore
-├── .stylelintrc.json
-├── package-lock.json
-├── package.json
-└── README.md
+│   │   └── App.js
+│   ├── bookCard
+│   │   └── BookCard.js
+│   ├── bookForm
+│   │   └── BookForm.js
+│   ├── books
+│   │   └── Books.js
+│   ├── categories
+│   │   └── Categories.js
+│   └── header
+│       └── Header.js
+├── redux
+│   ├── books
+│   │   └── booksReducer.js
+│   ├── categories
+│   │   └── categories.js
+│   └── store.js
+├── index.css
+└── index.js
 ```
 
 ## Getting Started
