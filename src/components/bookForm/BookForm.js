@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../redux/books/booksReducer';
+import { asyncAddBook } from '../../redux/books/booksReducer';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const sendNewBookAction = (e) => {
-    dispatch(addBook(
+    dispatch(asyncAddBook(
       {
         title: e.target[0].value,
         category: e.target[1].value,

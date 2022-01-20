@@ -38,9 +38,3 @@ export async function addBook(apiBookObj) {
   const response = await fetch(`${API_BASE}/apps/${getLocalID()}/books`, postBookOptions(apiBookObj));
   return response.text();
 }
-
-// addBook({
-//   item_id: 'item4',
-//   title: 'The Great Gatsby',
-//   category: 'Fiction',
-// }).then((data) => console.log(data));

@@ -1,3 +1,5 @@
+import { addBook } from '../../api/bookStoreAPI';
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const SET_INIT = 'bookStore/books/SET_INIT';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -13,10 +15,13 @@ export const initState = (payload) => ({
   payload,
 });
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+export const asyncAddBook = (payload) => (dispatch, getState) => {
+  const { booksState } = getState();
+  addBook({ ...payload, item_id: booksState.id + 1 }).then(() => dispatch({
+    type: ADD_BOOK,
+    payload,
+  }));
+};
 
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
