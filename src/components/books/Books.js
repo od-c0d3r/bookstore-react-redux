@@ -9,8 +9,8 @@ const Books = () => {
   const booksItem = books.length === 0 ? '[EMPTY LIST]' : books.map((book) => <BookCard key={book.id} data={book} />);
   return (
     <div id="booksPage">
-      <BookForm />
       {booksItem}
+      <BookForm />
     </div>
   );
 };
