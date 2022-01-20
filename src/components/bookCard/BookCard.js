@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/booksReducer';
+import { asyncRemoveBook } from '../../redux/books/booksReducer';
 
 const BookCard = (prop) => {
   const { data } = prop;
   const dispatch = useDispatch();
   const sendRemoveAction = () => {
-    dispatch(removeBook(data.id));
+    dispatch(asyncRemoveBook(data.id));
   };
 
   return (

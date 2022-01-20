@@ -12,7 +12,10 @@ import { getLocalID, setLocalID } from './api/localStorageAPI';
 function initAppState() {
   if (getLocalID()) {
     getBooks().then((data) => {
-      const processData = data.length ? Object.values(JSON.parse(data)).flat() : [];
+      const processData = Object.values(JSON.parse(data)).map((item, index) => {
+        const [ob] = item;
+        return { ...ob, id: index + 1 };
+      });
       store.dispatch(initState({
         newAppID: getLocalID(),
         newBooks: processData,

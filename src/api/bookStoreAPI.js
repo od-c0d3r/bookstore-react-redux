@@ -24,6 +24,12 @@ function postBookOptions(apiBookObj) {
   };
 }
 
+function removeBookOptions() {
+  return {
+    method: 'DELETE',
+  };
+}
+
 export async function newAppId() {
   const response = await fetch(`${API_BASE}/apps/`, postNewAppOptions());
   return response.text();
@@ -36,5 +42,10 @@ export async function getBooks() {
 
 export async function addBook(apiBookObj) {
   const response = await fetch(`${API_BASE}/apps/${getLocalID()}/books`, postBookOptions(apiBookObj));
+  return response.text();
+}
+
+export async function removeBook(bookId) {
+  const response = await fetch(`${API_BASE}/apps/${getLocalID()}/books/${bookId}`, removeBookOptions());
   return response.text();
 }
