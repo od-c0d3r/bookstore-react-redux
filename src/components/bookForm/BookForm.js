@@ -1,3 +1,4 @@
+import './BookForm.scss';
 import { useDispatch } from 'react-redux';
 import { asyncAddBook } from '../../redux/books/booksReducer';
 
@@ -16,11 +17,14 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={sendNewBookAction}>
-      <input id="inputBookTitle" type="text" placeholder="Enter Book Title" required />
-      <input id="inputBookCategory" type="text" placeholder="Category Name" required />
-      <input type="submit" value="Add new book" />
-    </form>
+    <div id="formDiv">
+      <h3 className="formHead">ADD NEW BOOK</h3>
+      <form onSubmit={sendNewBookAction}>
+        <input id="inputBookTitle" type="text" placeholder="Book Title" required />
+        <input id="inputBookCategory" type="text" placeholder="Category Name" required />
+        <input id="submitBtn" type="submit" value="ADD BOOK" />
+      </form>
+    </div>
   );
 };
 
