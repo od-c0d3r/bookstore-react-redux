@@ -5,22 +5,29 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/app/App';
 import store from './redux/store';
-import { addAppId } from './redux/books/booksReducer';
-import { newAppId } from './api/bookStoreAPI';
+import { initState } from './redux/books/booksReducer';
+import { getBooks, newAppId } from './api/bookStoreAPI';
 import { getLocalID, setLocalID } from './api/localStorageAPI';
 
-function setAppID() {
+function initAppState() {
   if (getLocalID()) {
-    store.dispatch(addAppId(getLocalID()));
+    getBooks().then((data) => {
+      const processData = data.length ? Object.values(JSON.parse(data)).flat() : [];
+      store.dispatch(initState({
+        newAppID: getLocalID(),
+        newBooks: processData,
+        newId: processData.length,
+      }));
+    });
   } else {
-    newAppId().then((newAppId) => {
-      setLocalID(newAppId);
-      store.dispatch(addAppId(newAppId));
+    newAppId().then((appId) => {
+      setLocalID(appId);
+      store.dispatch(initState({ newAppID: appId, newBooks: [], newId: 0 }));
     });
   }
 }
 
-setAppID();
+initAppState();
 
 ReactDOM.render(
   <React.StrictMode>

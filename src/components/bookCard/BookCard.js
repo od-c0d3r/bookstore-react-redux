@@ -15,9 +15,9 @@ const BookCard = (prop) => {
         <span>Title: </span>
         <span>{data.title}</span>
       </div>
-      <div className="book-author">
-        <span>Author: </span>
-        <span>{data.author}</span>
+      <div className="book-category">
+        <span>category: </span>
+        <span>{data.category}</span>
       </div>
       <button type="button" onClick={sendRemoveAction}>Remove</button>
     </>

@@ -1,5 +1,5 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const ADD_APPID = 'bookStore/books/ADD_APPID';
+const SET_INIT = 'bookStore/books/SET_INIT';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = {
@@ -8,8 +8,8 @@ const initialState = {
   books: [],
 };
 
-export const addAppId = (payload) => ({
-  type: ADD_APPID,
+export const initState = (payload) => ({
+  type: SET_INIT,
   payload,
 });
 
@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
         books: state.books.concat([{
           id: state.id + 1,
           title: action.payload.title,
-          author: action.payload.author,
+          category: action.payload.category,
         }]),
       };
     }
@@ -39,8 +39,14 @@ const reducer = (state = initialState, action) => {
       const booksAfterRemove = state.books.filter((book) => book.id !== action.payload);
       return { ...state, books: booksAfterRemove };
     }
-    case ADD_APPID: {
-      return { ...state, appid: action.payload };
+    case SET_INIT: {
+      const { newAppID, newBooks, newId } = action.payload;
+      return {
+        ...state,
+        appid: newAppID,
+        id: newId,
+        books: newBooks,
+      };
     }
     default:
       return state;

@@ -14,6 +14,16 @@ function getBooksOptions() {
   };
 }
 
+function postBookOptions(apiBookObj) {
+  return {
+    method: 'POST',
+    body: JSON.stringify(apiBookObj),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  };
+}
+
 export async function newAppId() {
   const response = await fetch(`${API_BASE}/apps/`, postNewAppOptions());
   return response.text();
@@ -24,4 +34,13 @@ export async function getBooks() {
   return response.text();
 }
 
-getBooks().then(((data) => console.log(data)));
+export async function addBook(apiBookObj) {
+  const response = await fetch(`${API_BASE}/apps/${getLocalID()}/books`, postBookOptions(apiBookObj));
+  return response.text();
+}
+
+// addBook({
+//   item_id: 'item4',
+//   title: 'The Great Gatsby',
+//   category: 'Fiction',
+// }).then((data) => console.log(data));
