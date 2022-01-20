@@ -1,5 +1,7 @@
+import './Categories.scss';
+
 const Categories = () => (
-  <div>
+  <div id="catPage">
     Under construction
   </div>
 );

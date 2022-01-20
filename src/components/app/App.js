@@ -1,3 +1,4 @@
+import './App.scss';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Books from '../books/Books';
@@ -6,7 +7,7 @@ import Categories from '../categories/Categories';
 
 function App() {
   return (
-    <>
+    <div id="app">
       <Header />
       <Routes>
         <Route path="/" element={<Books />} />
@@ -14,7 +15,7 @@ function App() {
         <Route path="home" element={<Books />} />
         <Route path="categories" element={<Categories />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
